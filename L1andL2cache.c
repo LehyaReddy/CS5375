@@ -28,6 +28,8 @@ struct L2Cache
 
 uint64_t convert_address(char memory_addr[])
 {
+    /* Converts the physical 32-bit address in the trace file to the "binary" \\
+     * (a uint64 that can have bitwise operations on it) */
     uint64_t binary = 0;
     int i = 0;
 
@@ -260,6 +262,7 @@ int main(int argc, char *argv[])
                 WritingIntoL1Cache(address, l1nway, &l1);
             }
         }
+        /*Printing out the results here */
         printf("Cache type:     l1\n");
         printf("==================================\n");
         printf("Cache Hits:    %d\n", l1.hits);

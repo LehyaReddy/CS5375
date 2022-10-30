@@ -156,6 +156,7 @@ void readFileAndDoCacheHitOrMiss(int noOfBlocks, int n_way, int sizeofBlock)
             }
         }
     }
+    /*Printing out the results here*/
     printf("==================================\n");
     printf("Cache Hits:    %d\n", d_cache.hits);
     printf("Cache Misses:  %d\n", d_cache.misses);
